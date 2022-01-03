@@ -28,7 +28,7 @@ jail_fine = 150
 treasure_value = 200
 empty = 0
 
-print("There are 3 players in this game and each player has money 1000 and 10 chances  :) ")
+print("There are 3 players in this game, each player has money 1000 and 10 chances  :) ")
 for i in range(1,11):
     dice = input("Player1's turn, chance no. " + str(chances)+ ", enter your chance no. : ")
     n = random.randint(2,12)
@@ -94,17 +94,15 @@ for i in range(1,11):
       "\n"f"And you get :- {c_p[l['point3']]} \nPlayer3 has {players['player3']} money remaining \n \n")
     chances += 1
 
-
-
-print(hotel_owner)
+#print(hotel_owner)
 H_O_list = list(hotel_owner.values())
 for x in players:
     y = H_O_list.count(x)
     players[x] += (hotel_worth*y)
-    print(y)
+    #print(y)
 
-print(H_O_list)
-#print("*Total worth = money remaining at end + valur of all hotel bought by player*").
+#print(H_O_list)
+#print("*Total worth = money remaining at end + value of all hotel bought by player*").
 a = sorted(players.values())
 b  = {}
 for i in  range(len(a)):
