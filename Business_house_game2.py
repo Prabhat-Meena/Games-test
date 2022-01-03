@@ -28,12 +28,12 @@ for i in range(1,7):
         print("c_p",c_p[l['point1']])
         if l['point1'] in hotel_check:
             print("You buy :",c_p[l['point1']])
-            players['player1'] -= 200
+            players['player1'] -= hotel_worth
             hotel_owner.update({l['point1']:'player1'})
             hotel_check.remove(l['point1'])
         else:
-            players['player1'] -= 50
-            players[hotel_owner[l['point1']]] += 50
+            players['player1'] -= hotel_rent
+            players[hotel_owner[l['point1']]] += hotel_rent
             print('hotel owner',hotel_owner[l['point1']])
     elif c_p[l['point1']] == "jail":
         print("you got",c_p[l['point1']])
@@ -54,12 +54,12 @@ for i in range(1,7):
         print("c_p",c_p[l['point2']])
         if l['point2'] in hotel_check:
             print("You buy :",c_p[l['point2']])
-            players['player2'] -= 200
+            players['player2'] -= hotel_worth
             hotel_owner.update({l['point2']:'player2'})
             hotel_check.remove(l['point2'])
         else:
-            players['player2'] -= 50
-            players[hotel_owner[l['point2']]] += 50
+            players['player2'] -= hotel_rent
+            players[hotel_owner[l['point2']]] += hotel_rent
             print('hotel owner',hotel_owner[l['point2']])
     elif c_p[l['point2']] == "jail":
         print("you got",c_p[l['point2']])
@@ -81,12 +81,12 @@ for i in range(1,7):
         print("c_p",c_p[l['point3']])
         if l['point3'] in hotel_check:
             print("You buy :",c_p[l['point3']])
-            players['player3'] -= 200
+            players['player3'] -= hotel_worth
             hotel_owner.update({l['point3']:'player3'})
             hotel_check.remove(l['point3'])
         else:
-            players['player3'] -= 50
-            players[hotel_owner[l['point3']]] += 50
+            players['player3'] -= hotel_rent
+            players[hotel_owner[l['point3']]] += hotel_rent
             print('hotel owner',hotel_owner[l['point3']])
     elif c_p[l['point3']] == "jail":
         print("you got",c_p[l['point3']])
