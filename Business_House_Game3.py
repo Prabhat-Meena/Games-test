@@ -22,16 +22,16 @@ treasure_value = 200
 
 print("All 3 players have 6 chances  :) ")
 for i in range(1,7):
-    daies = input("Player1's turn, chance no " + str(chances)+ ", enter your chance no. : ")
+    dice = input("Player1's turn, chance no " + str(chances)+ ", enter your chance no. : ")
     l['point1'] += D_O[p]
     if c_p[l['point1']] == "hotel":
         if l['point1'] in hotel_check:
-            players['player1'] -= 200
+            players['player1'] -= hotel_worth
             hotel_owner.update({l['point1']:'player1'})
             hotel_check.remove(l['point1'])
         else:
-            players['player1'] -= 50
-            players[hotel_owner[l['point1']]] += 50
+            players['player1'] -= hotel_rent
+            players[hotel_owner[l['point1']]] += hotel_rent
     elif c_p[l['point1']] == "jail":
         players['player1'] -= jail_fine
     elif c_p[l['point1']] == "treasure":
@@ -40,16 +40,16 @@ for i in range(1,7):
         players['player1'] += 0
     p += 1
 
-    daies = input("Player2's turn, chance no. "+str(chances)+", enter your chance no. : ")
+    dice = input("Player2's turn, chance no. "+str(chances)+", enter your chance no. : ")
     l['point2'] += D_O[p]
     if c_p[l['point2']] == "hotel":
         if l['point2'] in hotel_check:
-            players['player2'] -= 200
+            players['player2'] -= hotel_worth
             hotel_owner.update({l['point2']:'player2'})
             hotel_check.remove(l['point2'])
         else:
-            players['player2'] -= 50
-            players[hotel_owner[l['point2']]] += 50
+            players['player2'] -= hotel_rent
+            players[hotel_owner[l['point2']]] += hotel_rent
     elif c_p[l['point2']] == "jail":
         players['player2'] -= jail_fine
     elif c_p[l['point2']] == "treasure":
@@ -58,16 +58,16 @@ for i in range(1,7):
         players['player2'] += 0
     p += 1
 
-    daies = input("Player3's turn, chance no. "+str(chances)+", enter  your chance no. : ")
+    dice = input("Player3's turn, chance no. "+str(chances)+", enter  your chance no. : ")
     l['point3'] += D_O[p]
     if c_p[l['point3']] == "hotel":
         if l['point3'] in hotel_check:
-            players['player3'] -= 200
+            players['player3'] -= hotel_worth
             hotel_owner.update({l['point3']:'player3'})
             hotel_check.remove(l['point3'])
         else:
-            players['player3'] -= 50
-            players[hotel_owner[l['point3']]] += 50
+            players['player3'] -= hotel_rent
+            players[hotel_owner[l['point3']]] += hotel_rent
     elif c_p[l['point3']] == "jail":
         players['player3'] -= jail_fine
     elif c_p[l['point3']] == "treasure":
