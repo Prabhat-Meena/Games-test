@@ -48,7 +48,7 @@ for i in range(1,7):
             hotel_owner.update({l['point2']:'player2'})
             hotel_check.remove(l['point2'])
         else:
-            players['player2'] -= hote_rent
+            players['player2'] -= hotel_rent
             players[hotel_owner[l['point2']]] += hotel_rent
     elif c_p[l['point2']] == "jail":
         players['player2'] -= jail_fine
