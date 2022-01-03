@@ -22,7 +22,7 @@ treasure_value = 200
 
 print("All 3 players have 6 chances  :) ")
 for i in range(1,7):
-    daies = input("Player1's turn, chance no " + str(chances)+ ", enter your chance no. : ")
+    dice = input("Player1's turn, chance no " + str(chances)+ ", enter your chance no. : ")
     l['point1'] += D_O[p]
     if c_p[l['point1']] == "hotel":
         if l['point1'] in hotel_check:
@@ -40,7 +40,7 @@ for i in range(1,7):
         players['player1'] += 0
     p += 1
 
-    daies = input("Player2's turn, chance no. "+str(chances)+", enter your chance no. : ")
+    dice = input("Player2's turn, chance no. "+str(chances)+", enter your chance no. : ")
     l['point2'] += D_O[p]
     if c_p[l['point2']] == "hotel":
         if l['point2'] in hotel_check:
@@ -58,7 +58,7 @@ for i in range(1,7):
         players['player2'] += 0
     p += 1
 
-    daies = input("Player3's turn, chance no. "+str(chances)+", enter  your chance no. : ")
+    dice = input("Player3's turn, chance no. "+str(chances)+", enter  your chance no. : ")
     l['point3'] += D_O[p]
     if c_p[l['point3']] == "hotel":
         if l['point3'] in hotel_check:
