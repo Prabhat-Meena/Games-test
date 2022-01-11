@@ -11,7 +11,7 @@ print("There are 3 players in this game, each player has money 1000 and 10 chanc
 for i in range(1,11):
     m = 1
     for j in players:
-        dice = input(f"{j} turn, chance no. {r['chances']} enter your chance no. : ")
+        dice = input(f"{j}'s turn, chance number {r['chances']} enter your chance number or just press enter : ")
         n = random.randint(2,12)
         points[m] += n
         if rules[c_p[points[m]]] == "Hotel":
