@@ -7,7 +7,7 @@ c_p = ['e','e','e','j','h','e','t','j','t','e','e','h','j','t','h','e','e','j','
 points = {1:0,2:0,3:0}
 players = {'player1':1000,'player2':1000,'player3':1000}
 r = {'hotel_owner':{},'chances':1,'hotel_worth':200,'hotel_rent':50,'jail_fine':150,'treasure_value':200,'hotel_check': [H for H in range(len(c_p)) if (rules[c_p[H]]== "Hotel")]}
-print("There are 3 players in this game, each player has money 1000 and 10 chances  :) ")
+print("There are 3 players in this game, each player has money 1000 and 10 chances and after ten chances, player with maximum Money will be winner :) ")
 for i in range(1,11):
     m = 1
     for j in players:
